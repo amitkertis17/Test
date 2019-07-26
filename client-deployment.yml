@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: amitkertis/exam:3
+          image: amitkertis/exam:4
           ports:
             - containerPort: 80
           env:
@@ -23,3 +23,6 @@ spec:
                 configMapKeyRef:
                   name: special-config
                   key: special.BUILD_NUMBER
+          command: ["/bin/sh"]
+            args: [init.sh BUILD_NUMBER]
+            restartPolicy: OnFailure
