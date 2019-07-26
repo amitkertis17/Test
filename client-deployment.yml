@@ -23,6 +23,6 @@ spec:
                 configMapKeyRef:
                   name: special-config
                   key: special.BUILD_NUMBER
-          command: ["/bin/sh"]
-            args: [init.sh BUILD_NUMBER]
-            restartPolicy: OnFailure
+ #         command: ["/bin/sh"]
+  #          args: [init.sh BUILD_NUMBER]
+  #          restartPolicy: OnFailure

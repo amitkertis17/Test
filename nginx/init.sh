@@ -10,4 +10,4 @@ Hello visitor !!!  $1
 </body>
 </html>" > /usr/share/nginx/html/temp.html
 
-COPY temp.html /usr/share/nginx/html/index1.html
+COPY /usr/share/nginx/html/temp.html /usr/share/nginx/html/index1.html
