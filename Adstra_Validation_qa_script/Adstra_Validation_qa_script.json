@@ -1,0 +1,38 @@
+{
+  "name" : "Adstra_Validation_qa_script",
+  "description" : "",
+  "role" : "arn:aws:iam::752787015194:role/AWSGlueServiceNotebookRoleFullAccess",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://aws-glue-assets-752787015194-us-east-1/scripts/Adstra_Validation_qa_script.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--enable-metrics" : "true",
+    "--enable-spark-ui" : "true",
+    "--spark-event-logs-path" : "s3://aws-glue-assets-752787015194-us-east-1/sparkHistoryLogs/",
+    "--enable-job-insights" : "false",
+    "--enable-glue-datacatalog" : "true",
+    "--enable-continuous-cloudwatch-log" : "true",
+    "--job-bookmark-option" : "job-bookmark-disable",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-assets-752787015194-us-east-1/temporary/"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 60,
+  "timeout" : 2880,
+  "maxCapacity" : 60.0,
+  "glueVersion" : "4.0",
+  "numberOfWorkers" : 15,
+  "workerType" : "G.4X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "Test",
+    "branch" : "master",
+    "folder" : "Adstra_Validation_qa_script"
+  }
+}
